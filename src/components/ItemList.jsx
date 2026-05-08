@@ -99,6 +99,7 @@ export default function ItemList({ items, onAdd, onUpdate, onRemove, disabled })
                       className={`${styles.swatch} ${item.color === c.hex ? styles.swatchActive : ''}`}
                       style={{ background: c.hex }}
                       title={c.name}
+                      onMouseDown={e => e.preventDefault()}
                       onClick={() => onUpdate(item.id, { color: c.hex })}
                       aria-label={c.name}
                     />
